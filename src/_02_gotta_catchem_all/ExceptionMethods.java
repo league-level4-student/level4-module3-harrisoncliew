@@ -9,4 +9,15 @@ public class ExceptionMethods {
 			return numerator / denominator;
 		}
 	}
+	
+	public static String reverseString(String s) {
+		if(s.isEmpty()) {
+			throw new IllegalStateException();
+		}
+		String reversed = "";
+		for (int i = s.length()-1; i >= 0; i--) {
+			reversed += s.charAt(i);
+		}
+		return reversed;
+	}
 }
